@@ -1,0 +1,10 @@
+.article
+	ul.article-list
+
+		for article, slug in public.articles._data
+			li
+				a(href="/articles/#{ slug }")
+					h4= article.date
+					h2= article.title
+					h3= article.author
+					h5 Read more...
