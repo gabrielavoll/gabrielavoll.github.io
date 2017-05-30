@@ -3,5 +3,7 @@ html
 	head
 		title gato333 Blog
 		link(rel="stylesheet" href="/main.css")
+		link(href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet")
 	body
+		!= partial("_shared/nav")
 		!= yield
