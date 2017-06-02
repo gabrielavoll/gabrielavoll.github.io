@@ -137,11 +137,16 @@ a { color: inherit; }
 //  Experience
 /////////////////////
 
-.intro-container.my-experiences div { text-align: right; }
-
 .experience-wrapper {
-  max-width: 300px;
+  max-width: 310px;
+  display: block;
   margin: 0 0 0 auto;
+}
+
+.my-experience .w35 {
+  position: absolute;
+  max-width: 280px;
+  margin-bottom: 40px;
 }
 
 .experience-wrapper .time{
@@ -206,8 +211,14 @@ a { color: inherit; }
   margin-left: 25px;
 }
 
-
-
+@media screen and (max-width: 500px){
+  .my-experience .w35, .experience-wrapper {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 
 
 /////////////////////
