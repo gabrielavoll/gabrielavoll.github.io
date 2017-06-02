@@ -1,3 +1,20 @@
+///////////
+// COLORS
+///////////
+//
+
+//  #e1dce3;  // lightest purple
+//
+//  #a89eab;  // light purple
+//
+//  #847889; // medium purple
+//
+//  #625568 // medium dark purple
+//
+//  #5d4f64 // dark purple
+
+
+
 body{
   font-family: "Maven Pro";
   text-align: center;
@@ -7,12 +24,22 @@ body{
   margin: 0;
 }
 
+a { color: inherit; }
+
+.w50 { width: 50%; display: inline-block; vertical-align: top;}
+.right { text-align: right; }
+.center { text-align: center; }
 
 /////////////////////
 //  Nav
 /////////////////////
 
-.nav { width: 100%; }
+.nav {
+  width: 100%;
+  box-shadow: 0 0 20px 0 rgba(36,36,36,0.4);
+  position: relative;
+  z-index: 2;
+}
 
 .nav-inner {
   padding: 0;
@@ -37,24 +64,48 @@ body{
 //  Intro
 /////////////////////
 
-.intro {
+.intro-container {
+  margin: 0;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-container:not(.dark){
+  background: #ffffff;
   -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
   -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
   box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  position: relative;
-  padding-bottom: 30px;
 }
-.intro h1{
+
+.intro-container.dark {
+  z-index: 0;
+  background: #a89eab;  // light purple
+  color: #fff;
+}
+
+.intro-container h1.mega{
   margin: 0;
   font-size: 90px;
   line-height: 1em;
   padding: 0;
 }
 
-.intro h2{
+
+
+.intro-container h2{
   font-weight: 300;
   margin: 0;
 }
+
+.intro-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: left;
+}
+
+.intro-container.intro { padding-top: 0px; }
 
 @media screen and (max-width: 550px){
   .intro h1 { font-size: 60px; }
@@ -74,32 +125,17 @@ body{
 .intro_logo img { width: 100%; }
 
 /////////////////////
-//  About me
-/////////////////////
-
-.intro-container {
-  margin: 0;
-  padding: 30px 0 40px 0;
-}
-
-.intro-container.dark {
-  background: #847889;
-  color: #fff;
-}
-
-.intro-inner {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/////////////////////
 //  Article Singular
 /////////////////////
 
 .article {
   background: #e1dce3;  // lightest purple
   padding: 10px;
+  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
 }
 
 .article-title, .article-body {
@@ -126,6 +162,21 @@ body{
   text-align: left;
 }
 
+
+/////////////////////
+//  Footer
+/////////////////////
+
+.intro-container.footer {
+  background: #5d4f64;
+  padding: 30px 0 5px 0;
+  z-index: 0;
+}
+
+.footer p { margin-top: 10px; color: #e1dce3; }
+.footer a { text-decoration: none; }
+
+.footer a:hover { color: #ffffff; text-decoration: underline; }
 
 /////////////////////
 //  Articles
@@ -157,7 +208,7 @@ body{
 }
 
 .article-list li h5 {
-  color: #847889; // light purple
+  color: #847889; // medium purple
 }
 
 .article-list li h5:hover, .article li:hover h5 {
@@ -167,3 +218,40 @@ body{
 
 .article-list h1 { margin: 10px 0;}
 
+
+/////////////////////
+//  Social Icons
+/////////////////////
+
+.social-icons a {
+  display:inline-block;
+  margin-right: 10px; 
+}
+
+.social-icon{
+  width: 50px;
+  height: 50px;
+  background-size:contain;
+}
+
+.social-icons
+
+.social-icon.linkedin {
+  background: url('/public/linkedin.png');
+  background-size:contain;
+}
+
+.social-icon.linkedin:hover {
+  background: url('/public/linkedin-white.png');
+  background-size:contain;
+}
+
+.social-icon.github {
+  background: url('/public/github.png');
+  background-size:contain;
+}
+
+.social-icon.github:hover {
+  background: url('/public/github-white.png');
+  background-size:contain;
+}
