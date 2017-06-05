@@ -1,9 +1,18 @@
 
 
+var urlOffset = {
+	'about-me': -60,
+	'experience': -135
+}
 
-function scrollToDiv( scrollToY=null ){
-	if( scrollToY ){
-		window.scrollTo( 0, scrollToY);
+function scrollToDiv( classToScrollTo=null ){
+	if( classToScrollTo ){
+		var element = document.getElementsByClassName( classToScrollTo )[0];
+		if(element){
+			var offset = urlOffset[classToScrollTo] || 0;
+			window.scrollTo( 0, findPos(element) + offset );
+		} else
+			window.location.href = '/#' + classToScrollTo;
 	} else {
 		window.scrollTo(0, 0);
 	}
@@ -16,6 +25,11 @@ function findPos(obj) {
         do {
             curtop += obj.offsetTop;
         } while (obj = obj.offsetParent);
-    return [curtop];
+    return curtop;
     }
+}
+
+window.onload = function (){
+	if(window.location.hash && window.location.hash.length > 0)
+		scrollToDiv( window.location.hash.substr(1) );
 }
