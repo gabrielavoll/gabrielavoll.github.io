@@ -1,0 +1,20 @@
+{
+	"idk-nyc": {
+    "title": "IDK NYC",
+    "date": "2015-09-22",
+    "author": "Gabriela Voll",
+    "tags": "data-scrapping, javascript, ruby, ruby on rails, data-mining, noko-giri, events, free, web app, heroku, postgres"
+  },
+  "galaxian": {
+    "title": "Galaxian Replica",
+    "date": "2016-11-29",
+    "author": "Gabriela Voll",
+    "tags": "galaxian, game, code, javascript, processing, videogame, shooter, space, replica, github pages, github"
+  },
+  "escape-mt-akoom": {
+    "title": "Escape Mt. Akoom",
+    "date": "2016-05-12",
+    "author": "Gabriela Voll",
+    "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku"
+  }
+}

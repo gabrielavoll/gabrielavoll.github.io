@@ -1,0 +1,9 @@
+.article
+	ul.article-list
+
+		for code_obj, slug in public.code._data
+			li
+				a(href="/code/#{ slug }")
+					h4= code_obj.date
+					h1= code_obj.title
+					h3= code_obj.author
