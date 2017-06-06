@@ -10,7 +10,7 @@ function scrollToDiv( classToScrollTo=null ){
 		var element = document.getElementsByClassName( classToScrollTo )[0];
 		if(element){
 			var offset = urlOffset[classToScrollTo] || 0;
-			window.scrollTo( 0, findPos(element) + offset );
+			window.scrollTo( 0, findPos(element) + offset);
 		} else
 			window.location.href = '/#' + classToScrollTo;
 	} else {
