@@ -1,7 +1,7 @@
 
 
 var urlOffset = {
-	'about-me': -60,
+	'about': -60,
 	'experience': -135
 }
 
