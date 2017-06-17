@@ -3,27 +3,27 @@
     "title": "IDK NYC",
     "date": "2015-09-22",
     "author": "Gabriela Voll",
-    "image": "public/IDKScreenshot.jpg",
-    "walkthrough-mini": "public/IDKWalkthrough350W.gif",
-    "walkthrough": "public/IDKWalkthrough750W.gif",
+    "image": "/public/IDKScreenshot.jpg",
+    "walkthrough_mini": "/public/IDKWalkthrough350W.gif",
+    "walkthrough": "/public/IDKWalkthrough750W.gif",
     "tags": "data-scrapping, javascript, ruby, ruby on rails, data-mining, noko-giri, events, free, web app, heroku, postgres"
   },
   "galaxian": {
     "title": "Galaxian Replica",
     "date": "2016-11-29",
     "author": "Gabriela Voll",
-    "image": "public/GalaxianScreenShot.jpg",
-    "walkthrough-mini": "public/GalaxianWalkthrough350W.gif",
-    "walkthrough": "public/GalaxianWalkthrough750W.gif",
+    "image": "/public/GalaxianScreenShot.jpg",
+    "walkthrough_mini": "/public/GalaxianWalkthrough350W.gif",
+    "walkthrough": "/public/GalaxianWalkthrough750W.gif",
     "tags": "galaxian, game, code, javascript, processing, videogame, shooter, space, replica, github pages, github"
   },
   "escape-mt-akoom": {
     "title": "Escape Mt. Akoom",
     "date": "2016-05-12",
     "author": "Gabriela Voll",
-    "image": "public/MtAkoomScreenShot.jpg",
-    "walkthrough-mini": "public/MtAkoomWalkthrough350W.gif",
-    "walkthrough": "public/MtAkoomWalkthrough750W.gif",
+    "image": "/public/MtAkoomScreenShot.jpg",
+    "walkthrough_mini": "/public/MtAkoomWalkthrough350W.gif",
+    "walkthrough": "/public/MtAkoomWalkthrough750W.gif",
     "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku"
   }
 }

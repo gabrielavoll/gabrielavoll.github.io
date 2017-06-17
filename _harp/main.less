@@ -27,7 +27,7 @@ body{
 
 a { color: inherit; }
 
-.w60, .w35 {display: inline-block; vertical-align: top;}
+.w60, .w35, .col {display: inline-block; vertical-align: top;}
 .w60 { width: 60%; }
 .w35 { width: 35%; margin-right: 5%; }
 .right { text-align: right; }
@@ -47,7 +47,6 @@ a { color: inherit; }
   background: #a89eab;
   color: #ffffff;
 }
-
 
 //////////////////////////////////////////
 //  Nav
@@ -322,6 +321,38 @@ a { color: inherit; }
 
 .footer a:hover { color: #ffffff; text-decoration: underline; }
 
+
+//////////////////////////////////////////
+//  Code
+//////////////////////////////////////////
+
+.code-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.code-list li {
+  padding: 5px 0;
+  border-radius: 5px;
+  list-style: none;
+  list-style-type: none;
+  margin: 0 auto 10px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.code-list li .left-side {
+  position: absolute;
+}
+
+.code-list li .right-side {
+  background: #fff;
+  min-height: 197px;
+  margin-left: 350px;
+  padding: 0px 30px;
+}
 
 //////////////////////////////////////////
 //  Articles
