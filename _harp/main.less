@@ -48,6 +48,8 @@ a { color: inherit; }
   color: #ffffff;
 }
 
+h4 { text-align: right; }
+
 //////////////////////////////////////////
 //  Nav
 //////////////////////////////////////////
@@ -291,8 +293,6 @@ a { color: inherit; }
 
 .article-title { padding: 5px 30px; }
 
-.article-title h4, .article-list li h4 { text-align: right; }
-
 .article-body { padding: 20px 30px; }
 
 .terminal-text {
@@ -321,38 +321,6 @@ a { color: inherit; }
 
 .footer a:hover { color: #ffffff; text-decoration: underline; }
 
-
-//////////////////////////////////////////
-//  Code
-//////////////////////////////////////////
-
-.code-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  margin-bottom: 30px;
-}
-
-.code-list li {
-  padding: 5px 0;
-  border-radius: 5px;
-  list-style: none;
-  list-style-type: none;
-  margin: 0 auto 10px auto;
-  max-width: 700px;
-  text-align: left;
-}
-
-.code-list li .left-side {
-  position: absolute;
-}
-
-.code-list li .right-side {
-  background: #fff;
-  min-height: 197px;
-  margin-left: 350px;
-  padding: 0px 30px;
-}
 
 //////////////////////////////////////////
 //  Articles
@@ -394,6 +362,72 @@ a { color: inherit; }
 }
 
 .article-list h1 { margin: 10px 0;}
+
+
+//////////////////////////////////////////
+//  Code
+//////////////////////////////////////////
+
+
+.code-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.code-list li {
+  padding: 5px 0;
+  border-radius: 5px;
+  list-style: none;
+  list-style-type: none;
+  margin: 0 auto 10px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.code-list .left-side {
+  position: absolute;
+}
+
+.code-list .right-side {
+  background: #fff;
+  min-height: 197px;
+  margin-left: 350px;
+  padding: 0px 30px;
+}
+
+.code-list h4 { margin: 10px 0 0 0; }
+.code-list h1 { margin: 5px 0 0 0; }
+.code-list h6 { margin: 0; }
+
+.code-list h4.description {
+  margin: 5px 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 710px){
+  .code-list .right-side {
+    margin-left: 0;
+    min-height: initial;
+    padding: 0 15px 15px 15px;
+    margin-top: -3px;
+    border-radius: 5px;
+  }
+  .code-list .left-side {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .code-list .left-side img {
+    max-width: 400px;
+    width: 97%;
+  }
+  .code-list li { background: #ffffff; }
+}
+
 
 
 //////////////////////////////////////////

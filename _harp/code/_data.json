@@ -4,6 +4,7 @@
     "date": "2015-09-22",
     "author": "Gabriela Voll",
     "image": "/public/IDKScreenshot.jpg",
+    "description_mini": "Ruby on Rails data-scrapping web application that finds events happening today, in NYC.",
     "walkthrough_mini": "/public/IDKWalkthrough350W.gif",
     "walkthrough": "/public/IDKWalkthrough750W.gif",
     "tags": "data-scrapping, javascript, ruby, ruby on rails, data-mining, noko-giri, events, free, web app, heroku, postgres"
@@ -13,6 +14,7 @@
     "date": "2016-11-29",
     "author": "Gabriela Voll",
     "image": "/public/GalaxianScreenShot.jpg",
+    "description_mini": "Processing(JS/Java) video game hosted on Github.io pages, based off of the classic Galixian.",
     "walkthrough_mini": "/public/GalaxianWalkthrough350W.gif",
     "walkthrough": "/public/GalaxianWalkthrough750W.gif",
     "tags": "galaxian, game, code, javascript, processing, videogame, shooter, space, replica, github pages, github"
@@ -22,6 +24,7 @@
     "date": "2016-05-12",
     "author": "Gabriela Voll",
     "image": "/public/MtAkoomScreenShot.jpg",
+    "description_mini": "Unity Jumping Platformer, with procedurally created levels, that are alwasys possible to beat.",
     "walkthrough_mini": "/public/MtAkoomWalkthrough350W.gif",
     "walkthrough": "/public/MtAkoomWalkthrough750W.gif",
     "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku"
