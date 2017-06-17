@@ -1,0 +1,10 @@
+- var code_obj = public.code._data["galaxian"]
+
+.article
+	.article-title
+		h4= code_obj.date
+		h1= code_obj.title
+		h5= code_obj.tags
+	.article-body
+		p= code_obj.description_mini
+		img(src= code_obj.walkthrough)
