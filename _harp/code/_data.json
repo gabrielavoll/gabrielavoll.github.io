@@ -28,7 +28,7 @@
     "author": "Gabriela Voll",
     "image": "/public/MtAkoomScreenShot.jpg",
     "link":"http://escape-mt-akoom.herokuapp.com/",
-    "description_mini": "Unity Jumping Platformer, with procedurally created levels, that are alwasys possible to beat.",
+    "description_mini": "Unity Jumping Platformer, with procedurally created levels, that are always possible to beat.",
     "walkthrough_mini": "/public/MtAkoomWalkthrough350W.gif",
     "walkthrough": "/public/MtAkoomWalkthrough750W.gif",
     "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku"
