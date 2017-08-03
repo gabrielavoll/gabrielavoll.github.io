@@ -19,7 +19,6 @@
     "link": "http://galaxian-replica.herokuapp.com/",
     "description_mini": "Processing(JS/Java) video game hosted on Github.io pages, based off of the classic Galixian.",
     "walkthrough_mini": "/public/GalaxianWalkthrough350W.gif",
-    "description_long": "",
     "walkthrough": "/public/GalaxianWalkthrough750W.gif",
     "tags": "galaxian, game, code, javascript, processing, videogame, shooter, space, replica, github pages, github"
   },
@@ -28,9 +27,8 @@
     "date": "2016-05-12",
     "author": "Gabriela Voll",
     "image": "/public/MtAkoomScreenShot.jpg",
-    "link":"https://gato333.github.io/MtAkoom/",
+    "link":"http://escape-mt-akoom.herokuapp.com/",
     "description_mini": "Unity Jumping Platformer, with procedurally created levels, that are alwasys possible to beat.",
-    "description_long": "",
     "walkthrough_mini": "/public/MtAkoomWalkthrough350W.gif",
     "walkthrough": "/public/MtAkoomWalkthrough750W.gif",
     "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku"
