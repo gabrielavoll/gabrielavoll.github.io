@@ -4,5 +4,11 @@
     "date": "2017-05-29",
     "author": "Gabriela Voll",
     "tags": "blog, harp, jade, javascript, html, css, static site, how-to, js, static, github, github pages, how to"
+  },
+  "braintree-post": {
+  	"title": "How to Braintree",
+  	"date": "2017-11-06",
+  	"author": "Gabriela Voll",
+  	"tags": "braintree, ecommerce, javascript, braintree-client, nodejs, how to"
   }
 }

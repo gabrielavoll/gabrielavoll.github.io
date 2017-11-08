@@ -1,0 +1,101 @@
+.article
+	.article-title
+
+		h4 November 6, 2017
+		h1 How to Braintree
+		h3 by Gabriela Voll
+
+	.article-body
+
+		p Despite the fact that Braintree Developer Reference is great for their Javascript v3 Server and Client Integration, this is my simple instruction manual to a Javascript/NodeJS Braintree integration with thier v3 SDK.
+
+		img(src= '/public/braintree.png')
+
+		p 1. Get a Client Token from braintree on your server, using the server SDK
+		p 2a. Send Client Token from your server to your client
+		p 2b. Initialize the client SDK using the Client Token, which creates a Braintree Drop-in
+		p 3a. The user then submits their payment information through the Braintree Drop-in to Braintree
+		p 3b. Braintree then returns a Payment Nonce to the client SDK, which represents the users payment information
+		p 4. Send the Payment Nonce from your client to your server
+		p 5. Your server takes the payment nonce, and uses the server SDK to create a monetary transaction
+
+		h3 server.js
+			.terminal-text
+				# install braintree <br />
+				npm install braintree <br /> <br />
+				# in your server code, configure your braintree enviornment <br />
+				import braintree from "braintree"; <br />
+				let gateway = braintree.connect({ <br />
+				.tab
+					|	environment: 'sandbox' || 'production', <br />
+					|	merchantId: "useYourMerchantId", <br />
+					|	publicKey: "useYourPublicKey", <br />
+					|	privateKey: "useYourPrivateKey" <br />
+				}); <br /><br />
+				# 1. request a client token from braintree, via the server sdk <br />
+				| app.get("/client_token", function (req, res) {
+				.tab
+					|	gateway.clientToken.generate({}, function (err, response) { <br />
+					.tab
+						|	# 2a. send client token to your client <br />
+						|	res.send(response.clientToken); <br />
+					}); <br />
+				}); <br /><br />
+
+				# 5. consume payment nonce in a transaction on your server side <br />
+				|	app.post("/checkout", (req, res) => {  <br />
+				.tab
+					|	var nonceFromTheClient = req.body.payment_method_nonce; <br />
+					|	gateway.transaction.sale({
+					.tab
+						|	amount: "10.00",
+						|	paymentMethodNonce: nonceFromTheClient,
+						|	options: { submitForSettlement: true }
+					|	}, (err, result) => {}
+				|	});
+
+
+		h3 client.js
+			.terminal-text
+				# install braintree client and hosted fields SDK <br />
+				import btClient from 'braintree-web/client'; <br />
+				import btHostedFields from 'braintree-web/hosted-fields'; <br /><br />
+
+				# 2b. initialize braintree drop-in, with client token<br />
+				|	btClient.create({ authorization: clientToken }, <br />
+				.tab
+					|	function(err, instance) { <br />
+					|	btHostedFields.create({ <br />
+					.tab
+						|	client: instance, <br />
+						|	styles: { <br />
+						.tab
+							'input': { <br />
+							.tab
+								'color': '#000', <br />
+								'font-size': '12pt' <br />
+							}, <br />
+							'input.invalid': { 'color': 'tomato' }, <br />
+							'input.valid': { 'color': 'limegreen' } <br />
+						},  <br />
+						|	fields: {  <br />
+						.tab
+							number: { selector: "#cc" },  <br />
+							expirationDate: { selector: "#exp-date" },  <br />
+							cvv: { selector: "#cvv" },  <br />
+							postalCode: { selector: "#postalCode" },  <br />
+						|	}  <br />
+					|	}, (err, instance) => { <br />
+					# 3a. user submits their payment info to braintree
+					.tab hostedFieldsObj.button.addEventListener('click',
+						.tab (event) => { <br />
+							# 3b. Braintree then returns a payment nonce
+							.tab hostedFieldsObj.instance.tokenize( <br />
+								# 4. Send payment nonce to our server <br />
+								|	(tokenizeErr, payload) => submitNonceToServer(payload.nonce) ) <br />
+							|	}, false); <br />
+					|	}); <br />
+				|	}); <br />
+
+
+

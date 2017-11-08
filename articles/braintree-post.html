@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><title>gato333 Blog</title><link rel="stylesheet" href="/main.css"><link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico"><script src="/js/app.js"></script><link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet"></head><body><div class="nav-wrapper"></div><div class="nav"><ul class="nav-inner"><li><a href="/articles">Blog</a></li><li><a href="/code">Code</a></li><li><a onclick="scrollToDiv('experience');">Experience</a></li><li><a onclick="scrollToDiv('about');">About</a></li><li><a onclick="scrollToDiv('footer');">Contact</a></li></ul></div><div class="article"><div class="article-title"><h4>November 6, 2017</h4><h1>How to Braintree</h1><h3>by Gabriela Voll</h3></div><div class="article-body"><p>Despite the fact that Braintree Developer Reference is great for their Javascript v3 Server and Client Integration, this is my simple instruction manual to a Javascript/NodeJS Braintree integration with thier v3 SDK.</p><img src="/public/braintree.png"><p>1. Get a Client Token from braintree on your server, using the server SDK</p><p>2a. Send Client Token from your server to your client</p><p>2b. Initialize the client SDK using the Client Token, which creates a Braintree Drop-in</p><p>3a. The user then submits their payment information through the Braintree Drop-in to Braintree</p><p>3b. Braintree then returns a Payment Nonce to the client SDK, which represents the users payment information</p><p>4. Send the Payment Nonce from your client to your server</p><p>5. Your server takes the payment nonce, and uses the server SDK to create a monetary transaction</p><h3>server.js<div class="terminal-text"># install braintree <br><npm>install braintree <br> <br></npm># in your server code, configure your braintree enviornment <br><import>braintree from "braintree"; <br></import><let>gateway = braintree.connect({ <br></let><div class="tab">	environment: 'sandbox' || 'production', <br>
+	merchantId: "useYourMerchantId", <br>
+	publicKey: "useYourPublicKey", <br>
+	privateKey: "useYourPrivateKey" <br></div>}); <br><br>
+# 1. request a client token from braintree, via the server sdk <br>
+app.get("/client_token", function (req, res) {<div class="tab">	gateway.clientToken.generate({}, function (err, response) { <br><div class="tab">	# 2a. send client token to your client <br>
+	res.send(response.clientToken); <br></div>}); <br></div>}); <br><br>
+# 5. consume payment nonce in a transaction on your server side <br>
+	app.post("/checkout", (req, res) => {  <br><div class="tab">	var nonceFromTheClient = req.body.payment_method_nonce; <br>
+	gateway.transaction.sale({<div class="tab">	amount: "10.00",
+	paymentMethodNonce: nonceFromTheClient,
+	options: { submitForSettlement: true }</div>	}, (err, result) => {}</div>	});</div></h3><h3>client.js<div class="terminal-text"># install braintree client and hosted fields SDK <br><import>btClient from 'braintree-web/client'; <br></import><import>btHostedFields from 'braintree-web/hosted-fields'; <br><br></import># 2b. initialize braintree drop-in, with client token<br>
+	btClient.create({ authorization: clientToken }, <br><div class="tab">	function(err, instance) { <br>
+	btHostedFields.create({ <br><div class="tab">	client: instance, <br>
+	styles: { <br><div class="tab">'input': { <br><div class="tab">'color': '#000', <br>
+'font-size': '12pt' <br></div>}, <br>
+'input.invalid': { 'color': 'tomato' }, <br>
+'input.valid': { 'color': 'limegreen' } <br></div>},  <br>
+	fields: {  <br><div class="tab"><number>{ selector: "#cc" },  <br></number><expirationdate>{ selector: "#exp-date" },  <br></expirationdate><cvv>{ selector: "#cvv" },  <br></cvv><postalcode>{ selector: "#postalCode" },  <br></postalcode></div>	}  <br></div>	}, (err, instance) => { <br>
+# 3a. user submits their payment info to braintree<div class="tab">hostedFieldsObj.button.addEventListener('click',<div class="tab">(event) => { <br>
+# 3b. Braintree then returns a payment nonce<div class="tab">hostedFieldsObj.instance.tokenize( <br>
+# 4. Send payment nonce to our server <br>
+	(tokenizeErr, payload) => submitNonceToServer(payload.nonce) ) <br></div>	}, false); <br></div></div>	}); <br></div>	}); <br></div></h3></div></div><div class="footer"><div class="intro-inner"><div class="center"><div class="social-icons"><a href="https://www.github.com/gato333"><div class="social-icon github"></div></a><a href="https://www.linkedin.com/in/gabrielavoll/"><div class="social-icon linkedin"></div></a></div></div><p class="center">Gabriela Voll Full-stack Web Developer<br/><a href="mailto:gvoll333@gmail.com">gvoll333@gmail.com</a></p></div></div></body></html>
