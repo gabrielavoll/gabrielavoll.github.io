@@ -27,6 +27,8 @@ body{
 
 a { color: inherit; }
 
+img { max-width: 100%; }
+
 .w60, .w35, .col {display: inline-block; vertical-align: top;}
 .w60 { width: 60%; }
 .w35 { width: 35%; margin-right: 5%; }
@@ -116,7 +118,7 @@ h4 { text-align: right; }
 .intro-container.dark {
   background: #a89eab;  // light purple
   color: #fff;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -133,17 +135,23 @@ h4 { text-align: right; }
 }
 
 .intro-inner {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 30px;
   text-align: left;
 }
+
+.my-experience .intro-inner { max-width: 700px; }
 
 .intro-container.intro { padding-top: 0px; z-index: 2;}
 
 @media screen and (max-width: 550px){
   .intro h1 { font-size: 60px; }
   .intro h2 { font-size: 20px; }
+}
+
+@media screen and (max-width: 400px){
+  .intro-container h1.mega { font-size: 50px; }
 }
 
 
@@ -284,7 +292,7 @@ h4 { text-align: right; }
 
 .article-title, .article-body {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 900px;
   background: #ffffff;
   text-align: left;
   margin-bottom: 10px;
@@ -344,7 +352,7 @@ h4 { text-align: right; }
   list-style: none;
   list-style-type: none;
   margin: 0 auto 10px auto;
-  max-width: 700px;
+  max-width: 900px;
   text-align: left;
 }
 
@@ -384,7 +392,7 @@ h4 { text-align: right; }
   list-style: none;
   list-style-type: none;
   margin: 0 auto 10px auto;
-  max-width: 700px;
+  max-width: 900px;
   text-align: left;
 }
 
@@ -397,11 +405,17 @@ h4 { text-align: right; }
   min-height: 197px;
   margin-left: 350px;
   padding: 0px 30px;
+  position: relative;
 }
 
 .code-list h4 { margin: 10px 0 0 0; }
 .code-list h1 { margin: 5px 0 0 0; }
-.code-list h6 { margin: 0; }
+
+.code-list h6 {
+  bottom: 0;
+  position: absolute;
+  padding-right: 30px;
+}
 
 .code-list h4.description {
   margin: 5px 0;

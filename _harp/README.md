@@ -8,7 +8,7 @@ And all the compiled html, css files are in the root folder
 	git clone git@github.com:gato333/Blog.io.git
 	cd Blog.io
 	( have harp module installed on your local computer, then )
-	harp server
+	harp server (run inside _harp folder )
 ```
 
 ## Creating a new article
@@ -16,7 +16,7 @@ And all the compiled html, css files are in the root folder
 	add a md/jade/html file to the articles/ folder, with the intended url as the title
 	update _data.json file in the articles/ folder, to include new url, and its title and date
 
-	harp compile _harp ./
+	harp compile _harp ./ (run in root folder of git repo)
 	git commit -m "New Article by Person"
 	git push origin master
 ```
