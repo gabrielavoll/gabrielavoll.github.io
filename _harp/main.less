@@ -154,6 +154,7 @@ h4 { text-align: right; }
 
 @media screen and (max-width: 400px){
   .intro-container h1.mega { font-size: 50px; }
+  .intro-inner { padding: 0 15px; }
 }
 
 
@@ -375,6 +376,18 @@ h4 { text-align: right; }
 
 .article-list h1 { margin: 10px 0;}
 
+@media screen and (max-width: 710px){
+  .article-list li, .article-title, .article-body { padding: 5px 15px; }
+
+  .article-list h4, .article-list h1,
+  .article-title h4, .article-title h1 {
+    margin: 5px 0;
+  }
+  .article-list h1, .article-title h1 { font-size: 25px; }
+  .article-list h3, .article-title h3 { margin: 10px 0; font-size: 15px; }
+  .article-list h5, .article-title h5 { margin: 5px 0 10px 0; }
+}
+
 
 //////////////////////////////////////////
 //  Code
@@ -417,6 +430,8 @@ h4 { text-align: right; }
   bottom: 0;
   position: absolute;
   padding-right: 30px;
+  overflow: hidden;
+  max-height: 28px;
 }
 
 .code-list h4.description {
@@ -444,6 +459,12 @@ h4 { text-align: right; }
     width: 97%;
   }
   .code-list li { background: #ffffff; }
+  .code-list h6 {
+    position: relative;
+    padding-right: 0;
+    max-height: none;
+    margin: 10px 0 0 0;
+  }
 }
 
 
