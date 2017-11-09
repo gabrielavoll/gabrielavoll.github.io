@@ -1,10 +1,11 @@
+- var code_obj = public.articles._data["initial-post"]
+
 .article
 	.article-title
 
-		h4 May 29, 2017
-		h1 How to make a Static Site on Github with Harp
-		h3 by Gabriela Voll
-
+		h4= code_obj.date
+		h1= code_obj.title
+		h5= "tags: " + code_obj.tags
 	.article-body
 
 		p This here is the begining of my little tech blog, a place to essential record my own experiences with different technologies. This blog itself is my first utilization of a javascript module, Harp and Jade. Which from its github describes itself as:

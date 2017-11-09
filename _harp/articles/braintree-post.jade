@@ -1,10 +1,10 @@
+- var code_obj = public.articles._data["braintree-post"]
+
 .article
 	.article-title
-
-		h4 November 6, 2017
-		h1 How to Braintree
-		h3 by Gabriela Voll
-
+		h4= code_obj.date
+		h1= code_obj.title
+		h5= "tags: " + code_obj.tags
 	.article-body
 
 		p Despite the fact that Braintree Developer Reference is great for their Javascript v3 Server and Client Integration, this is my simple instruction manual to a Javascript/NodeJS Braintree integration with thier v3 SDK.

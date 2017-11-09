@@ -6,9 +6,9 @@
     "tags": "blog, harp, jade, javascript, html, css, static site, how-to, js, static, github, github pages, how to"
   },
   "braintree-post": {
-  	"title": "How to Braintree",
+  	"title": "Sample Braintree Intergration NodeJS/Braintree v3 Javascript client/Hosted Fields",
   	"date": "2017-11-06",
   	"author": "Gabriela Voll",
-  	"tags": "braintree, ecommerce, javascript, braintree-client, nodejs, how to"
+  	"tags": "braintree, ecommerce, javascript, braintree-client, nodejs, how to, hosted fields, javascript v3, ES2015, es2015, braintree-web, braintree-web/client, braintree-web/hosted-fields"
   }
 }
