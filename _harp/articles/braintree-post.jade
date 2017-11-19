@@ -12,7 +12,7 @@
 			a(href="https://developers.braintreepayments.com/start/overview")= "https://developers.braintreepayments.com/start/overview"
 
 
-		p Steal Braintree's beautiful visual repersentation of how one should interact with their SDKs? Don't mind if I do.
+		p Steal Braintree's beautiful visual representation  of how one should interact with their SDKs? Don't mind if I do.
 
 		img(src= '/public/braintree.png')
 
@@ -27,9 +27,9 @@
 		p 4. Send the Payment Nonce from your client to your server
 		p 5. Your server takes the Payment Nonce, and uses the server-side SDK to create a monetary transaction
 
-		p Below is a basic implementation in Javascript ES6 (love me some arrow funcitons) of the above descibed 5 step process, utilizing the JS v3 SDK with the Hosted Fields, instead of the simpiler Braintree Dropin.
-		p While it is faster and as I said simpiler to go with the Dropin, you have much higher degree of control of checkout behaviour with Hosted Fields, and the UI.
-		p So for my purposes I went with the Hosted Fields, even though in the end it results in alot more work. Both the Hosted Fields and the Dropin utilize iframe/s, the only difference being that Hosted Fields puts the iframe in the specfic input window elements specified, while the Drop in puts the entire payment form into and iframe.
+		p Below is a basic implementation in Javascript ES6 (love me some arrow functions) of the above described  5 step process, utilizing the JS v3 SDK with the Hosted Fields, instead of the simpler Braintree Dropin.
+		p While it is faster and as I said simpler to go with the Dropin, you have much higher degree of control of checkout behavior with Hosted Fields, and the UI.
+		p So for my purposes I went with the Hosted Fields, even though in the end it results in a lot more work. Both the Hosted Fields and the Dropin utilize iframe/s, the only difference being that Hosted Fields puts the iframe in the specific input window elements specified, while the Drop in puts the entire payment form into an iframe.
 
 		h3 in terminal, in your code repo
 			.terminal-text
@@ -38,7 +38,7 @@
 
 		h3 server.js
 			.terminal-text
-				.comment # 0. before you can start using Braintree's SDK in your server code, you need to import and configure your Braintree enviornment <br />
+				.comment # 0. before you can start using Braintree's SDK in your server code, you need to import and configure your Braintree environment <br />
 				|	import braintree from "braintree"; <br />
 				let gateway = braintree.connect({ <br />
 				.tab
@@ -109,13 +109,13 @@
 								postalCode: { selector: "#postalCode" },  <br />
 							|	}  <br />
 						|	}, (err, instance) => { <br />
-						.comment # 3a. Set-up listenter on the Hosted Fields submit button, so that we can trigger the Hosted Fields consumption of the customer's payment information
+						.comment # 3a. Set-up listener on the Hosted Fields submit button, so that we can trigger the Hosted Fields consumption of the customer's payment information
 						.tab document.querySelector( "#bt-submit").addEventListener('click',
 							.tab (event) => { <br />
 								.comment # 3b. Braintree returns a Payment Nonce to the Hosted Fields, which represents the customer's supplied payment method information
 								.tab hostedFieldsObj.instance.tokenize( <br />
 									.comment # 4. Send the Payment Nonce to our server <br />
-									.comment #		Another aspect that must be dealt with when utilizing the Hosted Fields, but not the Drop-in, is that we must handle the display of errors that Braintree sends our way when they failed to create a Payment Nonce from the information the customer submited, these errors are stored in tokenizeErr
+									.comment #		Another aspect that must be dealt with when utilizing the Hosted Fields, but not the Drop-in, is that we must handle the display of errors that Braintree sends our way when they failed to create a Payment Nonce from the information the customer submitted, these errors are stored in tokenizeErr
 									|	(tokenizeErr, payload) => checkoutFunction(payload.nonce) ) <br />
 								|	}, false); <br />
 						|	}); <br />
@@ -132,7 +132,7 @@
 					.tab
 						|	amount: "10.00", <br />
 						|	paymentMethodNonce: nonceFromTheClient, <br />
-						.comment # for the execution of a transaction.sale() in Braintree Production enviornment the following line is necessary, but not in Braintree Sandbox enviornment
+						.comment # for the execution of a transaction.sale() in Braintree Production environment the following line is necessary, but not in Braintree Sandbox environment
 						| merchantAccountId: yourMerchantId, <br />
 						|	options: { submitForSettlement: true } <br />
 					|	}, (err, result) => {} <br />
