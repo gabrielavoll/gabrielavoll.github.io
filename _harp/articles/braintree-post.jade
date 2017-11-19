@@ -6,11 +6,17 @@
 		h1= code_obj.title
 		h5= "tags: " + code_obj.tags
 	.article-body
+		p Braintree is just one of many online payment gateways that are available for the purpose of taking payment online; others include Paypal, Square and Stripe. These gateways take care of worries about security of customer credit card information and PCI compliance.
+
+		p Now, Braintree allows you to accept a variety of payment types: Visa, Mastercard, American Express, Discover, Diners Club, JCB, Maestro, Apple Pay, Android Pay Venmo, Visa Checkout and Paypal (in this post I am going to keep it to a simple integration, for accepting credit cards only).
+
+		p 
 
 		p These days Braintree has excellent developer reference guides for their many SDKs, the ones I'm most familiar with being the Javascript/NodeJS ones. Which can be found here:
 		p
 			a(href="https://developers.braintreepayments.com/start/overview")= "https://developers.braintreepayments.com/start/overview"
 
+		p Aside from the Javascript and NodeJS SDKs, Braintree also has SDKs available in Java, .NET, PHP, Python and Ruby
 
 		p Steal Braintree's beautiful visual representation  of how one should interact with their SDKs? Don't mind if I do.
 
@@ -28,8 +34,8 @@
 		p 5. Your server takes the Payment Nonce, and uses the server-side SDK to create a monetary transaction
 
 		p Below is a basic implementation in Javascript ES6 (love me some arrow functions) of the above described  5 step process, utilizing the JS v3 SDK with the Hosted Fields, instead of the simpler Braintree Dropin.
-		p While it is faster and as I said simpler to go with the Dropin, you have much higher degree of control of checkout behavior with Hosted Fields, and the UI.
-		p So for my purposes I went with the Hosted Fields, even though in the end it results in a lot more work. Both the Hosted Fields and the Dropin utilize iframe/s, the only difference being that Hosted Fields puts the iframe in the specific input window elements specified, while the Drop in puts the entire payment form into an iframe.
+		p While it is faster and as I said simpler to go with the Dropin, you have much higher degree of control over the checkout behavior and the UI, with Hosted Fields.
+		p So for my purposes I went with the Hosted Fields, even though in the end it results in a lot more work. Both the Hosted Fields and the Dropin utilize iframe/s, the only difference being that Hosted Fields puts the iframe in the specific input window elements specified, while the Dropin puts the entire payment form into an iframe.
 
 		h3 in terminal, in your code repo
 			.terminal-text
