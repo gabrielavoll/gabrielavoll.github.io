@@ -1,10 +1,8 @@
-- var code_obj = public.articles._data["braintree-post"]
-
 .article
 	.article-title
-		h4= code_obj.date
-		h1= code_obj.title
-		h5= "tags: " + code_obj.tags
+		h4= locals.date
+		h1= locals.title
+		h5= "tags: " + locals.tags
 	.article-body
 		p Braintree is just one of many online payment gateways that are available for the purpose of taking payment online; others include Paypal, Square and Stripe. These gateways take care of worries about security of customer credit card information and PCI compliance.
 
