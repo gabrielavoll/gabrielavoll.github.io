@@ -9,11 +9,14 @@
 
 		p Did you think of an idea for some code that you thought other developers might find #[span.highlight useful,] and could #[span.highlight re-use?]
 
-		br
+		p Recently at my own office transitioned from utilizing superagent to isomorphic-fetch because it has promise support, it also has a polyfill for 
+			|	older browsers and it also happens to be more popular right now (based soley on downloads).
 
-		p Recently at my own office we transitioned from utilzing superagent to isomorphic-fetch because ....
-		br
-		p Which is all fine and well but there were a couple distinct differences between between isomorphic-fetch and superagent:
+		p This is great, because we have some cases where multiple http requests need to be done in chain, so each waits on the response of the next. With 
+			| superagent that meant having nested superagent requests inside of .then(), but now with isomorpich-fetch these requests can be unnested and 
+			|	written in more linear manner, making things look cleaner.
+
+		p On the other hand there are a couple distinct differences between between isomorphic-fetch and superagent:
 
 		.tab
 			| 1. isomorphic-fetch forces you to add this ↓ flag, to be able to update the sites cookies
@@ -25,39 +28,139 @@
 				br
 				| headers: { 'Content-Type': 'application/json' }
 
-		p So all those these small differences dont matter too much in the long run, but I personally found it tedious to replicate this threw out our codebase. 
-			|	Especially when this information was not the simplest thing to find, given that it is not mentioned anywhere in the documentation
-			|	#[a(src="https://github.com/matthew-andrews/isomorphic-fetch") here.]
-			|	With superagent both of these things are set/done by default (i.e. send the body by default and allow the cookies to be updated by default).
+		p So these small differences dont matter too much in the long run, but I personally found it tedious to replicate this through out our codebase. 
+			|	Especially when this information was not the simplest thing to find, given that it is not mentioned anywhere in the documentation, 
+			|	#[a(src="https://github.com/matthew-andrews/isomorphic-fetch") here.] With superagent both of these things are set/done by default.
 
 		p And so without further to do, I decided I'd rather make a small wrapper around isomorphic fetch that would take both of these things in to consideration by default.
 
 		p This is my first hack at creating an npm module, below you will find a step by step process of how you go about doing that.
 
 		h3 Setup
-
 		p 1. Get/Have access to a Github account
 		p 2. Install Node.js (npm will be installed threw this process)
+		p 3. Create an account with npm (you will need to confirm your email)
 
 		h3 Github Repo
-
+		p 1. Create a repo for your node module, with the intended name
+		p 2. Choose a license, I chose MIT
+		p 3. Clone it locally
 
 		h3 Setup package.json
+		p In your new local repo, start your package.json with ↓, and answer all the questions.
+		.terminal-text npm init
+		p My own answers were
+		.terminal-text
+			| This utility will walk you through creating a package.json file. <br />
+			| It only covers the most common items, and tries to guess sensible defaults.  <br />
+			br
+			| See `npm help json` for definitive documentation on these fields  <br />
+			| and exactly what they do.  <br />
+			br
+			| Use `npm install <pkg>` afterwards to install a package and  <br />
+			| save it as a dependency in the package.json file.  <br />
+			br
+			| Press ^C at any time to quit.  <br />
+			| package name: (fetch.1)  <br />
+			| version: (1.0.0)  <br />
+			| description: wrapper for isomorphic-fetch module, that provides flags for basic requests  <br />
+			| entry point: (index.js)  <br />
+			| test command:  <br />
+			| git repository: (https://github.com/gato333/fetch.1.git)  <br />
+			| keywords: fetch, isomorphic-fetch, simplified, leaner  <br />
+			| author: Gabriela Voll  <br />
+			| license: (ISC) MIT  <br />
 
+		p Which resulted in:
+		.terminal-text
+			| {  <br />
+			.tab
+				| "name": "fetch.1",  <br />
+				| "version": "1.0.0",  <br />
+				| "description": "wrapper for isomorphic-fetch module, that provides flags for basic requests",  <br />
+				| "main": "index.js",  <br />
+				| "scripts": {  <br />
+				.tab
+					| "test": "echo \"Error: no test specified\" && exit 1"  <br />
+				| },  <br />
+				| "repository": {  <br />
+				.tab
+					| "type": "git", <br />
+					| "url": "git+https://github.com/gato333/fetch.1.git" <br />
+				| },<br />
+				| "keywords": [ <br />
+				.tab
+					| "fetch", <br />
+					| "isomorphic-fetch", <br />
+					| "simplified", <br />
+					| "leaner" <br />
+				| ], <br />
+				| "author": "Gabriela Voll", <br />
+				| "license": "MIT", <br />
+				| "bugs": { <br />
+				.tab
+					| "url": "https://github.com/gato333/fetch.1/issues" <br />
+				| }, <br />
+				| "homepage": "https://github.com/gato333/fetch.1#readme" <br />
+			| }
 
 		h3 Create a node module
-
+		p Here is a snippet from my own module ↓ index.js
+		.terminal-text
+			| use strict';  <br />
+			| const fetch = require('isomorphic-fetch'); <br />
+			| /** <br />
+			| * Makes isomorphic fetch for you <br />
+			| * but takes care of the params you need to pass in for basic calls <br />
+			|  */ <br />
+			br
+			| /** <br />
+			| * Makes isomorphic fetch GET <br />
+			| * BUT lets your call alter the cookies that are returned to the client <br />
+			| * @param {string} url <br />
+			| * @return {async function} <br />
+			| */ <br />
+			| exports.get = async function(url) { <br />
+			.tab
+				| return (await fetch(url, { credentials: 'include' })); <br />
+			| }; <br />
 
 		h3 Write some test
+		p There are a couple options out there for writing tests, but I end up going with Jest since I'm not very familiar with it. To install jest 
+		|	 and to add it to your package.json, in the terminal you just do:
+		.terminal-text
+			| npm install --save-dev jest
 
+		p So here is the first test i wrote for the first function in my module
+
+		.terminal-text
+			| const my_module = require('./index.js'); <br />
+			| const base_test_url = 'https://gato333.github.io/testserver' <br />
+			br
+			| test('get, allows you to alter cookies by default', async () => { <br />
+			.tab
+				| const response = await my_module.get(base_test_url); <br />
+			| });
 
 		h3 Run some test
+		p For run the Jest tests its pretty simple. First I add this , to my package.json
+		.terminal-text
+			|  "scripts": { <br />
+			.tab
+				| "test": "jest ./index --forceExit" <br />
+			| } <br />
+
+		p And then to actually run the test you put into the terminal:
+		.terminal-text
+			| npm run test
 
 
 		h3 Write a README
 
-		h3 Commit and push to Github
-
 		h3 Publish to npm
 
+		.terminal-text
+			| npm publish
+
 		h3 Import from npm into another project
+		
