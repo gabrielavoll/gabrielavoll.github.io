@@ -1,15 +1,23 @@
 {
-  
   "braintree-post": {
   	"title": "Sample Braintree Intergration NodeJS/Braintree v3 Javascript client/Hosted Fields",
   	"date": "2017-11-06",
+    "visible": true,
   	"author": "Gabriela Voll",
   	"tags": "braintree, ecommerce, javascript, braintree-client, nodejs, how to, hosted fields, braintree js v3, ES2015, ES6, braintree-web, braintree-web/client, braintree-web/hosted-fields"
   },
   "initial-post": {
     "title": "How to make a Static Site on Github with Harp",
     "date": "2017-05-29",
+    "visible": true,
     "author": "Gabriela Voll",
     "tags": "blog, harp, jade, javascript, html, css, static site, how-to, js, static, github, github pages, how to"
+  },
+  "isomorphic-fetch": {
+    "title": "My first npm package, simple isomorphic-fetch wrapper",
+    "date": "2018-02-28",
+    "author": "Gabriela Voll",
+    "visible": false,
+    "tags": "isomorphic-fetch, npm, npm module, package, node_modules, javascript, js, .js, my first npm package, how to, how to make npm module, node.js, node"
   }
 }

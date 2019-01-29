@@ -1,11 +1,8 @@
-- var code_obj = public.articles._data["initial-post"]
-
 .article
 	.article-title
-
-		h4= code_obj.date
-		h1= code_obj.title
-		h5= "tags: " + code_obj.tags
+		h4= locals.date
+		h1= locals.title
+		h5= "tags: " + locals.tags
 	.article-body
 
 		p This here is the begining of my little tech blog, a place to essential record my own experiences with different technologies. This blog itself is my first utilization of a javascript module, Harp and Jade. Which from its github describes itself as:

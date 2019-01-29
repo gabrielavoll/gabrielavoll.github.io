@@ -2,9 +2,10 @@
 	ul.article-list
 
 		for article, slug in public.articles._data
-			li
-				a(href="/articles/#{ slug }")
-					h4= article.date
-					h1= article.title
-					h6= "tags: " + article.tags
-					h5 Read more...
+			if public.articles._data[slug].visible
+				li
+					a(href="/articles/#{ slug }")
+						h4= article.date
+						h1= article.title
+						h6= "tags: " + article.tags
+						h5 Read more...
