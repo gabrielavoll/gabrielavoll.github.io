@@ -5,12 +5,18 @@ var urlOffset = {
 	'experience': -135
 }
 
-function scrollToDiv( classToScrollTo=null ){
+function scrollToDiv( classToScrollTo=null, flashTitle=null, flashClass='' ){
 	if( classToScrollTo ){
 		var element = document.getElementsByClassName( classToScrollTo )[0];
 		if(element){
 			var offset = urlOffset[classToScrollTo] || 0;
 			window.scrollTo( 0, findPos(element) + offset);
+			if( flashTitle ){
+				var toFlash = element.getElementsByTagName(flashTitle)[0];
+				toFlash.classList.remove(flashClass);
+				void toFlash.offsetWidth;
+				toFlash.classList.add(flashClass);
+			}
 		} else
 			window.location.href = '/#' + classToScrollTo;
 	} else {

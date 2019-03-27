@@ -514,3 +514,34 @@ h4 { text-align: right; }
   background: url('/public/github-white.png');
   background-size:contain;
 }
+
+
+
+//////////////////////////////////////////
+//  Animation
+//////////////////////////////////////////
+
+
+.blinkingW{
+  animation:blinkingWText .2s 4;
+}
+
+@keyframes blinkingWText{
+  0%{   color: default; }
+  49%{  color: #ffffff60; }
+  50%{  color: default;  }
+  99%{  color: #ffffff60 ; }
+  100%{ color: default;   }
+}
+
+.blinkingB{
+  animation:blinkingBText .2s 4;
+}
+
+@keyframes blinkingBText{
+  0%{  color: default; }
+  49%{  color: #00000060; }
+  50%{  color: default;  }
+  99%{  color: #00000060 ; }
+  100%{ color: default;  }
+}
