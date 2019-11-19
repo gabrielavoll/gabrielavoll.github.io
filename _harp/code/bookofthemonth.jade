@@ -1,16 +1,14 @@
-- var code_obj = public.code._data["bookofthemonth"]
-
 .article
 	.article-title
-		h4= code_obj.date
-		h1= code_obj.title
-		h5= "tags: " + code_obj.tags
+		h4= locals.date
+		h1= locals.title
+		h5= "tags: " + locals.tags
 	.article-body
 		h4 Spring 2016-to present day
 		p url: 
-			a(href=code_obj.link)= code_obj.link
+			a(href=locals.link)= locals.link
 
-		a(href=code_obj.link)
-			img(src= code_obj.walkthrough)
+		a(href=locals.link)
+			img(src= locals.walkthrough)
 
 		

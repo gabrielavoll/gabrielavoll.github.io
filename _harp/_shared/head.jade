@@ -1,5 +1,4 @@
 - var url = "https://gato333.github.io/" + current.path.filter( x => x != "index" ).join('/');
-
 - var better_des = current.path && current.path.length == 2 && current.path[1]  !== 'index' ?  locals.public[current.path[0]]._data[current.path[1]].tags : description;
 
 head
@@ -14,4 +13,3 @@ head
 	meta(property='og:title', content= title )
 	link(rel='canonical', href= url )
 	meta(name='description', content= better_des )
-	meta(name='rando', content= rando)

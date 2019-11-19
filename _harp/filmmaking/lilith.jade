@@ -1,14 +1,16 @@
+- var code_obj = public.filmmaking._data["lilith"]
+
 .article
 	.article-title
-		h4= locals.date
-		h1= locals.title
-		h5= "tags: " + locals.tags
+		h4= code_obj.date
+		h1= code_obj.title
+		h5= "tags: " + code_obj.tags
 	.article-body
 		h4 (November 2016-February 2017)
 		p url: 
-			a(href=locals.link)= locals.link
-		a(href=locals.link)
-			img(src= locals.walkthrough)
+			a(href=code_obj.link)= code_obj.link
+		a(href=code_obj.link)
+			img(src= code_obj.walkthrough)
 
 		p I started on this little game as a kind of visual programming exercise, based on the classic game Galaxian. I never had a huge love of the game but i thought such a famous game would be fun to recreate. I made this game entirely in Processing (a kind of java/javascript-like language). More on it available 
 			a(href="https://processing.org/overview/") here.

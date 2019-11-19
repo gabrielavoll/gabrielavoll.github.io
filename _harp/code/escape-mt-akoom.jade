@@ -1,17 +1,15 @@
-- var code_obj = public.code._data["escape-mt-akoom"]
-
 .article
 	.article-title
-		h4= code_obj.date
-		h1= code_obj.title
-		h5= "tags: " + code_obj.tags
+		h4= locals.date
+		h1= locals.title
+		h5= "tags: " + locals.tags
 	.article-body
 		h4 (Spring 2016-Summer 2016)
 		p url: 
-			a(href=code_obj.link)= code_obj.link
+			a(href=locals.link)= locals.link
 
-		a(href=code_obj.link)
-			img(src= code_obj.walkthrough)
+		a(href=locals.link)
+			img(src= locals.walkthrough)
 
 		p This is the first Unity game that I ever made, which I made for my thesis in my Game Programming Class. It is on a whole a very basic jumping platformer game, where you have some 3rd person character that you control utilizing the D-pad. The premise of the game is to escape from inside of a volcano.
 
