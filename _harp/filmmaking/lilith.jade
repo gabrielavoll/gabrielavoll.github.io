@@ -1,25 +1,56 @@
-- var code_obj = public.filmmaking._data["lilith"]
+div.iframe-holder
+	img(src= locals.poster_wide)
+	iframe(width="640" height="390" src=locals.trailer frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+	iframe.small(width="250", src=locals.trailer frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
 
-.article
-	.article-title
-		h4= code_obj.date
-		h1= code_obj.title
-		h5= "tags: " + code_obj.tags
+.film-outer
 	.article-body
-		h4 (November 2016-February 2017)
-		p url: 
-			a(href=code_obj.link)= code_obj.link
-		a(href=code_obj.link)
-			img(src= code_obj.walkthrough)
 
-		p I started on this little game as a kind of visual programming exercise, based on the classic game Galaxian. I never had a huge love of the game but i thought such a famous game would be fun to recreate. I made this game entirely in Processing (a kind of java/javascript-like language). More on it available 
-			a(href="https://processing.org/overview/") here.
-			|  I first learned how to program in this language in a Game Programming class I took in college in 2014, and have since grown a kind of fondness for it.
-		p First I wrote it in Processing's Java mode and then translated into Javascript mode, so that i could put it online. There are very few differences between the modes, but it was a real pain in the ass transitioning since the debugger in Processing2 is not the best. But I found this 
-			a(href="http://processingjs.org/articles/p5QuickStart.html") article
-			|  that discusses the transition helpful, and I wish I had found it earlier on in the processs.
-		p More on the game, is that to be 100% honest, I have never played Galaxian all that much and the last time I have played it was probably 12 years ago, so my memory of the game itself is a bit hazy and I definetly had to do some research to make it more accurate.
-		p The game has 3 levels,
-		p difficulty comes exclusively from the increased speed of the enemies.
-		p There are no power ups, or 1ups like in the original. So 3 lives is all you get.
-		p And the game is a bit slow until you have made 9 kills and at that time enemies will start to move out of their normal back and forth loop, and shoot thier own lasers.
+		h2 Awards
+		each laural in locals.laurel_white
+			img.awards(src="#{laural}")
+
+		h3 Plot
+		p= locals.blurb
+
+		h3 Synopsis
+		p= locals.synopsis
+
+		h2 Cast
+		.cast
+			each actor in locals.cast
+				if actor.link && actor.link.length > 0
+					a(href="#{actor.link}")
+						p #{actor.name}
+				else
+					p #{actor.name}
+
+		h3 Crew
+		.crew
+			for block, slug in locals.crew
+				if block.link && block.link.length > 0
+					h4.center= slug + ":"
+						a(href="#{block.link}")
+							p #{block.name}
+				else
+					h4.center= slug + ":"
+							p #{block.name}
+
+		br
+		.film-details
+			h4.center Runtime:
+				p= locals.runtime
+
+			h4.center Language:
+				p= locals.language
+
+			h4.center Release Date:
+				p= locals.release_date
+
+		h2 Posters
+		each poster in locals.posters
+			img.posters(src="#{poster}")
+
+		h2 Stills
+		each still in locals.stills
+			img.stills(src="#{still}")

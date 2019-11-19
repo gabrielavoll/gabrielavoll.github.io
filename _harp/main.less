@@ -70,7 +70,6 @@ h4 { text-align: right; }
 .nav {
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
-  position: fixed;
   z-index: 3;
   top: 0;
 }
@@ -93,6 +92,12 @@ h4 { text-align: right; }
   color:inherit;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media screen and (max-width: 510px){
+  .nav-inner li.less-important {
+    display: none;
+  }
 }
 
 
@@ -475,6 +480,91 @@ h4 { text-align: right; }
   }
 }
 
+//////////////////////////////////////////
+//  Filmmaking
+//////////////////////////////////////////
+
+
+img.awards {
+  width: 32%;
+  min-width: 160px;
+  max-width: 240px;
+}
+
+.awards + .awards {
+  padding-left: 1%;
+}
+
+.film-outer {
+  background: #433b46; //gray purple
+  padding: 10px;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+}
+
+.film-outer .article-body {
+  text-align: center;
+  padding: 1px 5px 30px 5px;
+}
+
+.cast a + a p {
+    padding-left: 30px;
+}
+
+.cast p { display: inline; }
+
+.crew p, .film-details p {
+  display: inline;
+  padding-left: 10px;
+}
+
+
+.film-outer img.posters,
+.film-outer img.stills {
+  width: 32%;
+}
+
+.film-outer img.stills + img,
+.film-outer img.posters + img {
+  padding-left: 1%;
+}
+
+
+
+.iframe-holder {
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+iframe.small {
+  display: none;
+}
+
+@media screen and (max-width: 815px){
+  iframe:not(.small){
+    display: none;
+  }
+  iframe.small {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 630px){
+ .film-outer img.stills {
+  width: 49%;
+ }
+}
 
 
 //////////////////////////////////////////

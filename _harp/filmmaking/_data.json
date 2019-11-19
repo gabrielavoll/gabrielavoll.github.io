@@ -3,13 +3,56 @@
   	"title": "Lilith's Awakening",
   	"date": "2019-02-28",
     "visible": true,
-    "poster": "",
-    "poster_mini": "",
-    "trailer": "",
-    "trailer_gif": "",
+    "poster": "/public/lilith_poster.jpg",
+    "poster_wide": "/public/lilith_wide.jpg",
+    "trailer": "https://www.youtube.com/embed/C3tb8ECp9FI",
+    "sexy_trailer": "https://www.pornhub.com/view_video.php?viewkey=ph5cb9698d7cbcc",
+    "trailer_mini_gif": "/public/lilith_trailer_mini.gif",
+    "trailer_gif": "/public/lilith_trailer.gif",
+    "cast": [{
+        "name" : "Sabina Magic",
+        "link": "https://twitter.com/sab_magic"
+      },{
+        "name": "Chad Alva",
+        "link": "https://twitter.com/chadalvaxxx"
+    }],
+    "crew": {
+        "Director": {
+            "name": "Gabriela Voll",
+            "link": "https://www.instagram.com/bruta.nyc/"
+        },
+        "Director of Photography": {
+          "name": "Julia Planter"
+        },
+        "Editor": {
+          "name": "Daniel Pinto"
+        },
+        "Associate Producer":{
+          "name": "JT Footman",
+          "link": "https://www.imdb.com/name/nm8653640/?ref_=ttfc_fc_cr2"
+        },
+        "Assistant Camera":{
+          "name": "Byron Guinanzaca",
+          "link": "https://www.imdb.com/name/nm7873829/?ref_=ttfc_fc_cr12"
+        },
+        "Assistant Camera":{
+          "name": "Matthew Matossian",
+          "link": "https://www.imdb.com/name/nm1380853/?ref_=ttfc_fc_cr14"
+        },
+        "Art Direction":{
+          "name": "Sydney Clara Brafman",
+          "link": "https://www.imdb.com/name/nm6315915/?ref_=ttfc_fc_cr7"
+        }
+    },
+    "laurel_white": [ "/public/laurel_grrl.png", "/public/laurel_nyfilm.png", "/public/laurel_peep.png"],
+    "release_date": "February 28, 2019",
+    "language": "English",
+    "runtime": "10:40 minutes",
+    "posters": ["/public/poster1.jpg","/public/poster2.jpg","/public/poster3.jpg"],
+    "stills": ["/public/still1.jpg","/public/still2.jpg","/public/still3.jpg","/public/still4.jpg","/public/still5.jpg","/public/still6.jpg"],
     "synopsis": "\"Lilith's Awakening\"  is a erotic horror film written, directed and produced by Gabriela Voll, about a young woman who begins to experience weird phenomena which results in the possession of her body by a dark unknown force. The only thing that is certain is that no man is safe.",
     "blurb": "A young woman, possessed by an evil force goes on a rampage. There are worse ways to die, I suppose.",
-    "genre": "erotica, horror, gore",
+    "genre": "short, erotica, horror, gore",
   	"tags": "Lilith's Awakening, liliths awakening, lilith, awakening, horror movie, horror, horror short, art house, blood, bloodfest, halloween, dark romance, demon, succubus, maneater, porn, arthouse porn"
   }
 }
