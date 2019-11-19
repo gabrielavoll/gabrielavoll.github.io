@@ -3,14 +3,24 @@
   	"title": "Blessings: Art Show",
   	"date": "2019-08-31",
     "visible": true,
-    "artists": "Gabriela Voll, Annette Voll, Mona Zeitoun, Mercy Weiss, Shaquilla Rivers, Rita Perez, Shanika Powell, Rachel Luz",
+    "artists": [
+      "Gabriela Voll",
+      "Annette Voll",
+      "Mona Zeitoun",
+      "Mercy Weiss",
+      "Shaquilla Rivers",
+      "Rita Perez",
+      "Shanika Powell",
+      "Rachel Luz"
+    ],
     "location": "100 Thames St. Brooklyn, NY 11237",
     "venue":"The Living Room",
     "time": "6:00-10:00pm",
-    "poster_large": "",
-    "poster_small": "",
+    "poster_large": "/public/blessing_poster.jpg",
+    "poster_small": "/public/blessing_poster_mini.jpg",
     "walkthrough": "",
     "walkthrough_mini": "",
+    "description_mini": "one-day pop-up art gallery in bushwick, NYC, of up and coming female artists",
   	"tags": "art, art show, art gallery, nyc, new york, new york art gallery, curator, opening, art gallery opening, pop-up, pop-up art show, nyc, summer, Gabriela Voll, Blessings: Art Show, Blessings, blessings, nyc pop-up, nyc artist, artist, art show"
   }
 }

@@ -5,9 +5,9 @@
 			li
 				a(href="/curitorial/#{ slug }")
 					.left-side
-						image(src= event_obj.walkthrough_mini )
+						image(src= event_obj.poster_small )
 					.col.right-side
 						h4= event_obj.date
 						h1= event_obj.title
-						h4.description= event_obj.description_mini
-						h6= "tags: " + event_obj.tags
+						h3.description= event_obj.description_mini
+						h6= event_obj.venue + " at " + event_obj.location
