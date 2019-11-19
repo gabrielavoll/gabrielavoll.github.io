@@ -1,0 +1,13 @@
+.article
+	ul.code-list
+
+		for film_obj, slug in public.filmmaking._data
+			li
+				a(href="/filmmaking/#{ slug }")
+					.left-side
+						image(src= film_obj.walkthrough_mini )
+					.col.right-side
+						h4= film_obj.date
+						h1= film_obj.title
+						h4.description= film_obj.description_mini
+						h6= "tags: " + film_obj.tags
