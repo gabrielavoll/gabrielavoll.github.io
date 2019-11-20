@@ -1,0 +1,26 @@
+
+- var filter = /(\.html$)/;
+- var replace = /(\.html$)|(^index\.html$)/;
+- var base = "https://gato333.github.io"
+
+mixin tree(head, tail)
+  for val, key in head
+    if key !== '.git' && key !== '_data'
+      if key == '_contents'
+        each file in val
+          if filter.test(file) && !/^404\.html/.test(file) && !/^README\.html/.test(file)
+            - file = file.replace(replace, "");
+            - var prio = "0.64"
+            if tail + file == '/'
+              - prio = "1.00"
+            else if "/filmmaking/lilith" == tail + file || /code/.test(tail + file) || /films/.test(tail + file)
+              - prio = "0.80"
+            url
+              loc= base + tail + file
+              priority= prio
+      else
+        mixin tree(val, tail + key + "/")
+
+doctype xml
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+  mixin tree(public, "/")
