@@ -2,11 +2,11 @@
 	"galaxian": {
         "title": "Galaxian Replica | web browser video game",
         "date": "2016-11-29",
-        "image": "/public/GalaxianScreenShot.jpg",
+        "image": "/public/galaxian/GalaxianScreenShot.jpg",
         "link": "http://galaxian-replica.herokuapp.com/",
         "description_mini": "Processing(JS/Java) video game hosted on Github.io pages, based off of the classic Galixian.",
-        "walkthrough_mini": "/public/GalaxianWalkthrough350W.gif",
-        "walkthrough": "/public/GalaxianWalkthrough750W.gif",
+        "walkthrough_mini": "/public/galaxian/GalaxianWalkthrough350W.gif",
+        "walkthrough": "/public/galaxian/GalaxianWalkthrough750W.gif",
         "tags": "galaxian, game, code, javascript, processing, videogame, shooter, space, replica, github pages, github, github.io, games, retro games"
     },
      "bookofthemonth": {
@@ -14,8 +14,8 @@
         "date": "2016-06-01",
         "link": "https://www.bookofthemonth.com",
         "description_mini": "Cutting edge AWS hosted Javascript/NodeJS React/Redux Ecommerce website",
-        "walkthrough_mini": "/public/BookOfTheMonthWalkthrough350W.gif",
-        "walkthrough": "/public/BookOfTheMonthWalkthrough750W.gif",
+        "walkthrough_mini": "/public/bookofthemonth/BookOfTheMonthWalkthrough350W.gif",
+        "walkthrough": "/public/bookofthemonth/BookOfTheMonthWalkthrough750W.gif",
         "tags": "ecommerce, book, bookofthemonth, javascript, nodejs, aws, aws, aws services, ui, fullstack, github, babel, ES2015, ES6, ES7"
     },
     "escape-mt-akoom": {
@@ -23,8 +23,8 @@
         "date": "2016-05-12",
         "link":"http://escape-mt-akoom.herokuapp.com/",
         "description_mini": "Unity Jumping Platformer, with procedurally created levels, that are always possible to beat.",
-        "walkthrough_mini": "/public/MtAkoomWalkthrough350W.gif",
-        "walkthrough": "/public/MtAkoomWalkthrough750W.gif",
+        "walkthrough_mini": "/public/escape-mt-akoom/MtAkoomWalkthrough350W.gif",
+        "walkthrough": "/public/escape-mt-akoom/MtAkoomWalkthrough750W.gif",
         "tags": "game, code, javascript, unity, videogame, jumper, replica, platformer, heroku, web browser video game, lava, escape"
     },
     "idk-nyc": {
@@ -33,8 +33,8 @@
         "link": "http://idontknow-nyc.herokuapp.com/",
         "old_link": "http://idontknow.info/",
         "description_mini": "Ruby on Rails data-scrapping web application that finds events happening today, in NYC.",
-        "walkthrough_mini": "/public/IDKWalkthrough350W.gif",
-        "walkthrough": "/public/IDKWalkthrough750W.gif",
+        "walkthrough_mini": "/public/idk-nyc/IDKWalkthrough350W.gif",
+        "walkthrough": "/public/idk-nyc/IDKWalkthrough750W.gif",
         "tags": "data-scrapping, javascript, ruby, ruby on rails, REST-ful, art opening, art galleries, art gallery, ror, RoR, data-mining, noko-giri, events, free, web app, heroku, postgres, google maps, data-mining"
     }
 }

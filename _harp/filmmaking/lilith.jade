@@ -1,20 +1,10 @@
-div.iframe-holder
-	img(src= locals.poster_wide)
-	iframe(width="640" height="390" src=locals.trailer frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
-	iframe.small(width="250", src=locals.trailer frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
-
 .film-outer
+	div.film_bg
+	div.iframe-holder
+		iframe(width="640" height="390" src=locals.trailer frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
 	.article-body
 
-		h2 Awards
-		each laural in locals.laurel_white
-			img.awards(src="#{laural}")
-
-		h3 Plot
 		p= locals.blurb
-
-		h3 Synopsis
-		p= locals.synopsis
 
 		h2 Cast
 		.cast
@@ -24,6 +14,13 @@ div.iframe-holder
 						p #{actor.name}
 				else
 					p #{actor.name}
+
+		h2 Awards
+		each laural in locals.laurel_white
+			img.awards(src="#{laural}")
+
+		h3 Synopsis
+		p= locals.synopsis
 
 		h3 Crew
 		.crew
