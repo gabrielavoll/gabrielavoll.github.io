@@ -5,14 +5,26 @@
 				a(onclick="scrollToDiv('intro', 'h2', 'blinkingW');")
 					img.mini_logo(src="/public/logo_mini.png")
 			li.less-important
-				a(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
+				if( current.path && current.path[0] == 'index' )
+					a.active(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
+				else
+					a(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
 			li.less-important
 				a(onclick="scrollToDiv('my-experience', 'h2', 'blinkingB');") Experience
 			li
-				a(href="/code") Code
+				if( current.path && current.path[0] == 'code' && current.path[1] && current.path[1] == 'index')
+					a.active(href="/code") Code
+				else
+					a(href="/code") Code
 			li
-				a(href="/filmmaking/lilith") Films
+				if( current.path && current.path[0] == 'filmmaking' && current.path[1] && current.path[1] == 'lilith')
+					a.active(href="/filmmaking/lilith") Films
+				else
+					a(href="/filmmaking/lilith") Films
 			li
-				a(href="/curatorial") Curatorial
+				if( current.path && current.path[0] == 'curatorial' && current.path[1] && current.path[1] == 'index')
+					a.active(href="/curatorial") Curatorial
+				else
+					a(href="/curatorial") Curatorial
 			li.less-important
 				a(onclick="scrollToDiv('footer', 'p', 'blinkingW');") Contact

@@ -12,7 +12,7 @@
 //
 //  #625568 // medium dark purple
 //
-//  #5d4f64 // dark purple
+//  #5a4f64 // dark purple
 //
 //  #7035a6 // bright purple
 //
@@ -22,7 +22,7 @@ body{
   font-family: "Maven Pro";
   text-align: center;
   padding:0;
-  background: #5d4f64;
+  background: #5a4f64;
   color: #000;
   margin: 0;
 }
@@ -95,6 +95,11 @@ h4 { text-align: right; }
   text-decoration: none;
 }
 
+.nav-inner li a.active {
+  color: #8d73b4;
+}
+
+
 @media screen and (max-width: 532px){
   .nav-inner li.less-important {
     display: none;
@@ -122,9 +127,9 @@ h4 { text-align: right; }
 }
 
 .intro-container.last {
-  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
+  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
+  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
 }
 .intro-container.dark {
   color: #fff;
@@ -293,13 +298,9 @@ h4 { text-align: right; }
 
 
 .article {
-  background: #433b46;  // darkest purple
   padding: 10px;
   z-index: 1;
   position: relative;
-  -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
 }
 
 .article-title, .article-body {
@@ -336,8 +337,8 @@ h4 { text-align: right; }
 
 
 .footer {
-  background: #5d4f64;
-  padding: 40px 0 5px 0;
+  background: #5a4f64;
+  padding: 30px 0 5px 0;
   z-index: 0;
 }
 
@@ -412,7 +413,6 @@ h4 { text-align: right; }
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin-bottom: 30px;
 }
 
 .code-list li {
@@ -511,13 +511,13 @@ img.awards {
 
 .film-outer {
   background: #433b46; //gray purple
-  padding: 10px 10px 100px 10px;
+  padding: 10px 10px 40px 10px;
   z-index: 1;
   text-align: center;
   position: relative;
-  -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
-  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.6);
+  -webkit-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
+  -moz-box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
+  box-shadow: 0 15px 25px -2px rgba(36,36,36,0.4);
 }
 
 .film-outer .article-body {
@@ -585,13 +585,14 @@ iframe {
 }
 
 .article.art .left-side,
-.article.art .right-siee {
+.article.art .right-side {
   position: relative;
 }
 
 .article.art .left-side {
   float: left;
   width: 310px;
+  height: 390px;
 }
 
 .article.art .left-side img { width: 280px; }
@@ -609,15 +610,21 @@ iframe {
   background: none;
 }
 
-.article.art .code-list { margin-bottom: -10px; }
+.article.art .code-list {margin-bottom: -10px; }
 
 @media screen and (max-width: 510px){
   .article.art .left-side,
   .article.art .left-side img {
     width: 100%;
+    height: auto;
   }
 }
 
+.article.art .code-list h6 {
+  position: relative;
+  padding-right: 0px;
+  margin: 0 0 5px 0;
+}
 
 //////////////////////////////////////////
 //  Social Icons
