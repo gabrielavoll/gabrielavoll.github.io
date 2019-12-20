@@ -101,13 +101,16 @@ h4 { text-align: right; }
   color: #8d73b4;
 }
 
-
-@media screen and (max-width: 532px){
+@media screen and (max-width: 547px){
   .nav-inner li.less-important {
     display: none;
   }
 }
 
+@media screen and (max-width: 308px){
+  .nav-inner { margin: 10px 0; }
+  .nav-inner li { padding: 10px 5px; }
+}
 
 //////////////////////////////////////////
 //  Intro
@@ -394,6 +397,10 @@ h4 { text-align: right; }
   text-decoration: underline;
 }
 
+.article-body .button {
+  margin: 10px 0;
+}
+
 .article-list h1 { margin: 10px 0;}
 
 @media screen and (max-width: 710px){
@@ -438,21 +445,25 @@ h4 { text-align: right; }
 
 .code-list .right-side {
   background: #fff;
-  min-height: 197px;
+  height: 197px;
   margin-left: 350px;
   padding: 0px 30px;
   position: relative;
 }
 
 .code-list h4 { margin: 10px 0 0 0; }
-.code-list h1 { margin: 5px 0 0 0; }
+
+.code-list h1 {
+  margin: 0;
+  font-size: 1.7em;
+}
 
 .code-list h6 {
   bottom: 0;
   position: absolute;
   padding-right: 30px;
   overflow: hidden;
-  max-height: 28px;
+  max-height: 26px;
 }
 
 .code-list h4.description {
@@ -460,12 +471,19 @@ h4 { text-align: right; }
   text-align: left;
 }
 
+
+@media screen and (max-width: 765px){
+  .code-list h6 { display:none; }
+  .article.art h6.back-button { display: block; }
+}
+
 @media screen and (max-width: 710px){
   .code-list .right-side {
     margin-left: 0;
-    min-height: initial;
+    height: auto;
     padding: 0 15px 15px 15px;
     margin-top: -3px;
+    display: block;
     border-radius: 5px;
   }
   .code-list .left-side {
@@ -485,7 +503,10 @@ h4 { text-align: right; }
     padding-right: 0;
     max-height: none;
     margin: 10px 0 0 0;
+    display: block;
   }
+  .code-list a { text-decoration: none; }
+  .article.art h6.back-button { padding-top: 10px; }
 }
 
 //////////////////////////////////////////
@@ -616,9 +637,17 @@ iframe {
   margin: 0;
   padding: 0 0 40px 0;
   background: none;
+  height: auto;
 }
 
 .article.art .code-list {margin-bottom: -10px; }
+
+.article.art h6.back-button { 
+  margin: 15px 0 0 0;
+  position: relative;
+  padding-right: 0;
+  overflow: visible;
+}
 
 @media screen and (max-width: 510px){
   .article.art .left-side,
@@ -626,12 +655,6 @@ iframe {
     width: 100%;
     height: auto;
   }
-}
-
-.article.art .code-list h6 {
-  position: relative;
-  padding-right: 0px;
-  margin: 0 0 5px 0;
 }
 
 //////////////////////////////////////////

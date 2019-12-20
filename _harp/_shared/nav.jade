@@ -5,10 +5,7 @@
 				a(onclick="scrollToDiv('intro', 'h2', 'blinkingW');")
 					img.mini_logo(src="/public/logo_mini.png")
 			li.less-important
-				if( current.path && current.path[0] == 'index' )
-					a.active(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
-				else
-					a(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
+				a(onclick="scrollToDiv('about', 'h2', 'blinkingW');") About
 			li.less-important
 				a(onclick="scrollToDiv('my-experience', 'h2', 'blinkingB');") Experience
 			li
@@ -17,12 +14,12 @@
 				else
 					a(href="/code") Code
 			li
-				if( current.path && current.path[0] == 'filmmaking' && current.path[1] && current.path[1] == 'lilith')
+				if( current.path && current.path[0] == 'filmmaking')
 					a.active(href="/filmmaking/lilith") Films
 				else
 					a(href="/filmmaking/lilith") Films
 			li
-				if( current.path && current.path[0] == 'curatorial' && current.path[1] && current.path[1] == 'index')
+				if( current.path && current.path[0] == 'curatorial')
 					a.active(href="/curatorial") Curatorial
 				else
 					a(href="/curatorial") Curatorial

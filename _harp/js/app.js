@@ -2,7 +2,7 @@
 
 var urlOffset = {
 	'about': -60,
-	'experience': -135
+	'my-experience': -58
 }
 
 function scrollToDiv( classToScrollTo=null, flashTitle=null, flashClass='' ){

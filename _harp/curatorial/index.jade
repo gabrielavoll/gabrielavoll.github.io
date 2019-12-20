@@ -9,5 +9,6 @@
 					.col.right-side
 						h4= event_obj.date
 						h1= event_obj.title
-						h3.description= event_obj.description_mini
-						h6= event_obj.venue + " at " + event_obj.location
+						h4.description= event_obj.description_mini
+						h4.description= "Opening: " + event_obj.date + " " + event_obj.time
+						h6= event_obj.venue + " at " + event_obj.address + " " + event_obj.address1

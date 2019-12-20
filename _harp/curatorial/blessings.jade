@@ -4,7 +4,7 @@
 			.left-side
 				img(src= locals.poster_large)
 			.right-side
-				h6
+				h6.back-button
 					a(href="/curatorial") ← back to index
 				h1= locals.article_title
 				h5 Location:
@@ -34,11 +34,11 @@
 				p The show featured a selection of 34 paintings, drawings, and sculptures and 3 site-specific installations, If you missed the actual event please feel free to take a look at the walkthrough and snapshots from the event below.
 				br
 
-				h2 Walkthrough
+				h2.center Walkthrough
 				div.iframe-holder
 					iframe(width="640" height="390" src=locals.walkthrough frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
 
-				h2 Stills
+				h2.center Stills
 				each still in locals.stills
 					a(href="#{still}")
 						img.stills(src="#{still}")
