@@ -9,6 +9,7 @@
 //  #a89eab;  // light purple
 //
 //  #847889; // medium purple
+//  #8c73b3 also medium purpl
 //
 //  #625568 // medium dark purple
 //
@@ -48,11 +49,17 @@ img { max-width: 100%; }
 }
 
 .button:hover {
-  background: #8c73b3;
-  color: #ffffff;
+  background: #8c73b3 !important;
+  color: #ffffff !important;
 }
 
 .button.left { float: left }
+
+.intro-container.dark .button {
+  color: #625568; 
+  background: #ffffff;
+  border-color: #ffffff;
+}
 
 
 h4 { text-align: right; }
