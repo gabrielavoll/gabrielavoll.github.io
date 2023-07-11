@@ -5,8 +5,8 @@ And all the compiled html, css files are in the root folder
 ## Setup
 first install [Harp](http://harpjs.com/docs/quick-start) module on your local computer globally
 ```
-	git clone git@github.com:gato333/gato333.github.io.git
-	cd gato333.github.io
+	git clone git@github.com:gabrielavoll/gabrielavoll.github.io.git
+	cd gabrielavoll.github.io
 	harp _harp
 ```
 
