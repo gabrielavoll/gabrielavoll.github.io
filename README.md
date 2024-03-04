@@ -15,8 +15,8 @@ add a md/jade/html file to the articles/ folder, with the intended url as the ti
 
 update _data.json file in the articles/ folder, to include new url, and its title and date
 ```
-	harp _harp compile
-	(copy contents of compile into root directory)
+	harp _harp build
+	(copy contents of build folder into root directory)
 	git commit -m "New Article by Person"
 	git push origin master
 ```
