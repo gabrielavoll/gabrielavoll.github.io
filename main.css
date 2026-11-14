@@ -224,6 +224,11 @@ h4 {
   top: 5px;
   border-radius: 5px;
 }
+.company-icon.capitalone {
+  background: #ffffff url('/public/capital_one.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .company-icon.revel {
   background: #ffffff url('/public/revel-icon.png');
   background-size: contain;
